@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak — DITZNET TECHNOLOGY</title>
+  <meta name="description" content="Hubungi DITZNET TECHNOLOGY untuk konsultasi layanan IT, web development, logistik, dan event organizer.">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<canvas id="particles-canvas"></canvas>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="DITZNET">
+      <span class="nav-logo-text">DITZNET</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" data-i18n="nav_home">Beranda</a>
+      <a href="about.html" data-i18n="nav_about">Tentang</a>
+      <a href="services.html" data-i18n="nav_services">Layanan</a>
+      <a href="projects.html" data-i18n="nav_projects">Proyek</a>
+      <a href="contact.html" class="active" data-i18n="nav_contact">Kontak</a>
+    </div>
+    <div class="nav-actions">
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="id">ID</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="page-transition">
+
+  <div class="page-hero">
+    <div class="grid-bg"></div>
+    <div class="section-inner">
+      <div class="section-label" data-i18n="contact_label">Kontak</div>
+      <h1 class="section-title">
+        <span data-i18n="contact_title_1">Mari Berkolaborasi</span><br>
+        <span data-i18n="contact_title_2">Bersama</span>
+      </h1>
+      <p class="section-desc" style="margin:0 auto; text-align:center;" data-i18n="contact_desc">
+        Punya proyek atau pertanyaan? Tim kami siap membantu mewujudkan ide Anda.
+      </p>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top:40px;">
+    <div class="section-inner">
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="reveal">
+          <h2 class="section-title" style="font-size:clamp(1.6rem,3vw,2rem);">
+            Hubungi <span>Kami</span>
+          </h2>
+          <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.8;">
+            Kami terbuka untuk diskusi tentang proyek baru, ide kreatif, maupun kesempatan kerjasama. Pilih cara yang paling nyaman untuk Anda.
+          </p>
+
+          <div class="contact-info-items">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6281464435341" target="_blank" class="contact-info-item" style="text-decoration:none;">
+              <div class="contact-info-icon" style="background:rgba(34,197,94,0.1); color:#22c55e;">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <div>
+                <div class="contact-info-label" data-i18n="contact_wa">WhatsApp</div>
+                <div class="contact-info-value">081464435341</div>
+              </div>
+              <i class="fas fa-arrow-right" style="margin-left:auto; color:var(--text-muted); font-size:0.85rem;"></i>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/ditznet.tech" target="_blank" class="contact-info-item" style="text-decoration:none;">
+              <div class="contact-info-icon" style="background:rgba(239,68,68,0.1); color:#f97316;">
+                <i class="fab fa-instagram"></i>
+              </div>
+              <div>
+                <div class="contact-info-label" data-i18n="contact_ig">Instagram</div>
+                <div class="contact-info-value">@ditznet.tech</div>
+              </div>
+              <i class="fas fa-arrow-right" style="margin-left:auto; color:var(--text-muted); font-size:0.85rem;"></i>
+            </a>
+
+            <!-- Gmail -->
+            <a href="mailto:ditznet.tech@gmail.com" class="contact-info-item" style="text-decoration:none;">
+              <div class="contact-info-icon" style="background:rgba(234,67,53,0.1); color:#ea4335;">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <div class="contact-info-label">Gmail</div>
+                <div class="contact-info-value">ditznet.tech@gmail.com</div>
+              </div>
+              <i class="fas fa-arrow-right" style="margin-left:auto; color:var(--text-muted); font-size:0.85rem;"></i>
+            </a>
+
+            <!-- Location -->
+            <div class="contact-info-item">
+              <div class="contact-info-icon" style="background:rgba(0,212,255,0.1); color:var(--accent-cyan);">
+                <i class="fas fa-location-dot"></i>
+              </div>
+              <div>
+                <div class="contact-info-label">Lokasi</div>
+                <div class="contact-info-value">Cirebon, Jawa Barat, Indonesia</div>
+              </div>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="contact-info-item">
+              <div class="contact-info-icon" style="background:rgba(245,166,35,0.1); color:var(--accent-gold);">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <div class="contact-info-label">Jam Operasional</div>
+                <div class="contact-info-value">Senin – Sabtu, 08:00 – 20:00 WIB</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick actions -->
+          <div style="margin-top: 2rem;">
+            <p style="font-size:0.78rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em; font-family:var(--font-display); font-weight:700; margin-bottom:1rem;">Respon Cepat</p>
+            <div style="display:flex; gap:0.75rem;">
+              <a href="https://wa.me/6281464435341?text=Halo%20DITZNET%20TECHNOLOGY,%20saya%20ingin%20berkonsultasi%20mengenai%20layanan%20Anda." target="_blank" class="btn btn-primary" style="flex:1; justify-content:center; background:linear-gradient(135deg,#22c55e,#16a34a); box-shadow: 0 4px 20px rgba(34,197,94,0.3);">
+                <i class="fab fa-whatsapp"></i>
+                <span>Chat WA</span>
+              </a>
+              <a href="https://instagram.com/ditznet.tech" target="_blank" class="btn btn-outline" style="flex:1; justify-content:center;">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap reveal reveal-delay-2">
+          <h3 class="form-title" data-i18n="form_title">Kirim Pesan</h3>
+          <p class="form-subtitle" data-i18n="form_subtitle">Isi form di bawah dan kami akan membalas sesegera mungkin.</p>
+
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-name" data-i18n="form_name">Nama Lengkap</label>
+                <input type="text" id="form-name" class="form-control" data-i18n="form_name_ph" placeholder="Masukkan nama Anda" required>
+              </div>
+              <div class="form-group">
+                <label for="form-email" data-i18n="form_email">Alamat Email</label>
+                <input type="email" id="form-email" class="form-control" data-i18n="form_email_ph" placeholder="email@contoh.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="form-subject" data-i18n="form_subject">Subjek</label>
+              <input type="text" id="form-subject" class="form-control" data-i18n="form_subject_ph" placeholder="Topik pesan Anda" required>
+            </div>
+            <div class="form-group">
+              <label for="form-message" data-i18n="form_message">Pesan</label>
+              <textarea id="form-message" class="form-control" data-i18n="form_message_ph" placeholder="Tulis pesan Anda di sini..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit" style="width:100%; justify-content:center;">
+              <i class="fas fa-paper-plane"></i>
+              <span data-i18n="form_btn">Kirim Pesan</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" style="padding-top:0;">
+    <div class="section-inner">
+      <div style="text-align:center; margin-bottom:3rem;" class="reveal">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title" style="font-size:clamp(1.6rem,3vw,2rem);">Pertanyaan yang Sering <span>Ditanyakan</span></h2>
+      </div>
+
+      <style>
+        .faq-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.25rem;
+          max-width: 960px;
+          margin: 0 auto;
+        }
+        .faq-block {
+          background: var(--bg-card);
+          border: 1px solid var(--border);
+          border-radius: var(--radius-lg);
+          padding: 2rem 1.75rem;
+          position: relative;
+          overflow: hidden;
+          transition: border-color 0.25s ease, transform 0.25s ease;
+        }
+        .faq-block:hover {
+          border-color: var(--border-accent);
+          transform: translateY(-4px);
+        }
+        .faq-block-icon {
+          width: 44px;
+          height: 44px;
+          border-radius: 12px;
+          background: rgba(0,212,255,0.08);
+          border: 1px solid rgba(0,212,255,0.15);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 1.25rem;
+          font-size: 1rem;
+          color: var(--accent-cyan);
+        }
+        .faq-block:nth-child(2) .faq-block-icon {
+          background: rgba(26,111,255,0.08);
+          border-color: rgba(26,111,255,0.15);
+          color: var(--accent-blue);
+        }
+        .faq-block:nth-child(3) .faq-block-icon {
+          background: rgba(245,166,35,0.08);
+          border-color: rgba(245,166,35,0.15);
+          color: var(--accent-gold);
+        }
+        .faq-block-q {
+          font-family: var(--font-display);
+          font-size: 0.9rem;
+          font-weight: 800;
+          color: var(--text-primary);
+          line-height: 1.4;
+          margin-bottom: 1rem;
+        }
+        .faq-block-a {
+          font-size: 0.83rem;
+          color: var(--text-secondary);
+          line-height: 1.75;
+        }
+        .faq-block-a strong {
+          color: var(--text-primary);
+          font-weight: 600;
+        }
+        .faq-block-num {
+          position: absolute;
+          top: 1.25rem;
+          right: 1.25rem;
+          font-family: var(--font-display);
+          font-size: 2.5rem;
+          font-weight: 900;
+          color: rgba(255,255,255,0.03);
+          line-height: 1;
+          pointer-events: none;
+        }
+        @media (max-width: 768px) {
+          .faq-grid { grid-template-columns: 1fr; }
+        }
+      </style>
+
+      <div class="faq-grid">
+
+        <div class="faq-block stagger-item">
+          <div class="faq-block-num">01</div>
+          <div class="faq-block-icon"><i class="fas fa-timer"></i></div>
+          <div class="faq-block-q">Berapa lama proses pembuatan website?</div>
+          <div class="faq-block-a">
+            Company profile sederhana selesai dalam <strong>3–7 hari kerja</strong>. Aplikasi web kompleks memakan waktu <strong>2–4 minggu</strong>. Timeline selalu disepakati bersama di awal proyek.
+          </div>
+        </div>
+
+        <div class="faq-block stagger-item">
+          <div class="faq-block-num">02</div>
+          <div class="faq-block-icon"><i class="fas fa-earth-asia"></i></div>
+          <div class="faq-block-q">Apakah DITZNET melayani klien di luar Cirebon?</div>
+          <div class="faq-block-a">
+            Ya! Layanan IT dan web development kami bisa dilakukan <strong>secara remote</strong> untuk klien di seluruh Indonesia. Layanan on-site melayani wilayah <strong>Cirebon dan sekitarnya</strong>.
+          </div>
+        </div>
+
+        <div class="faq-block stagger-item">
+          <div class="faq-block-num">03</div>
+          <div class="faq-block-icon"><i class="fas fa-handshake"></i></div>
+          <div class="faq-block-q">Bagaimana cara memulai kerjasama dengan DITZNET?</div>
+          <div class="faq-block-a">
+            Sangat mudah! Hubungi kami via <strong>WhatsApp atau Instagram</strong>, atau isi form di atas. Kami akan mengatur <strong>konsultasi gratis</strong> secepatnya.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.png" alt="DITZNET TECHNOLOGY">
+        <p data-i18n="footer_desc">Ekosistem layanan teknologi dan bisnis terpadu.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/6281464435341" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://instagram.com/ditznet.tech" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_links">Tautan</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span data-i18n="nav_home">Beranda</span></a></li>
+          <li><a href="about.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span data-i18n="nav_about">Tentang</span></a></li>
+          <li><a href="projects.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span data-i18n="nav_projects">Proyek</span></a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span data-i18n="nav_contact">Kontak</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_services">Layanan</h4>
+        <ul>
+          <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span>Networking & IT</span></a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span>Web Development</span></a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span>Logistik & Warehouse</span></a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span>Event Organizer</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_contact">Kontak</h4>
+        <ul>
+          <li><a href="https://wa.me/6281464435341" target="_blank"><i class="fab fa-whatsapp"></i><span>081464435341</span></a></li>
+          <li><a href="https://instagram.com/ditznet.tech" target="_blank"><i class="fab fa-instagram"></i><span>@ditznet.tech</span></a></li>
+          <li><a href="#"><i class="fas fa-location-dot"></i><span>Cirebon, Jawa Barat</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 <span>DITZNET TECHNOLOGY</span>. <span data-i18n="footer_rights">Seluruh hak dilindungi.</span></span>
+    </div>
+  </div>
+</footer>
+
+<nav class="bottom-nav">
+  <a href="index.html" class="bottom-nav-item"><i class="fas fa-house"></i><span data-i18n="nav_home">Beranda</span></a>
+  <a href="about.html" class="bottom-nav-item"><i class="fas fa-circle-info"></i><span data-i18n="nav_about">Tentang</span></a>
+  <a href="services.html" class="bottom-nav-item"><i class="fas fa-layer-group"></i><span data-i18n="nav_services">Layanan</span></a>
+  <a href="projects.html" class="bottom-nav-item"><i class="fas fa-folder-open"></i><span data-i18n="nav_projects">Proyek</span></a>
+  <a href="contact.html" class="bottom-nav-item active"><i class="fas fa-envelope"></i><span data-i18n="nav_contact">Kontak</span></a>
+</nav>
+
+<script src="js/main.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/router.js"></script>
+<script>try { var s = document.createElement("script"); s.id = "contact-js"; s.src = "js/contact.js"; document.body.appendChild(s); } catch(e) {}</script>
+
+
+</body>
+</html>

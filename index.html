@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DITZNET TECHNOLOGY — Ekosistem Digital Terpadu</title>
+  <meta name="description" content="DITZNET TECHNOLOGY – Layanan IT, Web Development, Networking, Logistik, dan Event Organizer terpadu berbasis Cirebon.">
+  <link rel="icon" href="logo.png" type="image/png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- Particles Canvas -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- ── NAVBAR ── -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="DITZNET">
+      <span class="nav-logo-text">DITZNET</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active" data-i18n="nav_home">Beranda</a>
+      <a href="about.html" data-i18n="nav_about">Tentang</a>
+      <a href="services.html" data-i18n="nav_services">Layanan</a>
+      <a href="projects.html" data-i18n="nav_projects">Proyek</a>
+      <a href="contact.html" data-i18n="nav_contact">Kontak</a>
+    </div>
+    <div class="nav-actions">
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="id">ID</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ── MAIN ── -->
+<main class="page-transition">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="grid-bg"></div>
+    <div class="scan-line"></div>
+    <div class="blob" style="top:10%; left:60%;"></div>
+
+    <div class="hero-inner">
+      <!-- Content -->
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fas fa-circle" style="font-size:0.5rem; color:#22c55e;"></i>
+          <span data-i18n="hero_tag">Teknologi & Inovasi</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="line-gradient" data-i18n="hero_title_1">Solusi Digital</span><br>
+          <span data-i18n="hero_title_2">Terpadu untuk</span><br>
+          <span class="line-gold" data-i18n="hero_title_3">Bisnis Modern</span>
+        </h1>
+        <p class="hero-desc" data-i18n="hero_desc">
+          DITZNET TECHNOLOGY menghadirkan layanan teknologi informasi, pengembangan web, jaringan, logistik, dan event organizer — semua dalam satu ekosistem terpadu.
+        </p>
+        <div class="hero-actions">
+          <a href="services.html" class="btn btn-primary btn-magnetic">
+            <i class="fas fa-layer-group"></i>
+            <span data-i18n="hero_btn_services">Lihat Layanan</span>
+          </a>
+          <a href="contact.html" class="btn btn-outline">
+            <i class="fas fa-envelope"></i>
+            <span data-i18n="hero_btn_contact">Hubungi Kami</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-num" data-count="15" data-suffix="+">0+</div>
+            <div class="hero-stat-label" data-i18n="hero_stat_1">Proyek Selesai</div>
+          </div>
+          <div>
+            <div class="hero-stat-num" data-count="10" data-suffix="+">0+</div>
+            <div class="hero-stat-label" data-i18n="hero_stat_2">Klien Puas</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">2024</div>
+            <div class="hero-stat-label" data-i18n="hero_stat_3">Tahun Berdiri</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual -->
+      <div class="hero-visual">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-grid-visual">
+          <div class="hero-card-float f1">
+            <div class="float-dot"></div>
+            <span data-i18n="hero_float_1">Aktif & Beroperasi</span>
+          </div>
+          <div class="hero-card-main tilt-card">
+            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
+              <img src="logo.png" alt="DITZNET" style="height:28px; width:auto;">
+              <div>
+                <div style="font-family:var(--font-display); font-size:0.82rem; font-weight:700;">DITZNET TECHNOLOGY</div>
+                <div style="font-size:0.7rem; color:var(--text-muted);">Est. 18 Oktober 2024</div>
+              </div>
+            </div>
+            <div class="hero-card-services">
+              <div class="hcs-item">
+                <div class="hcs-icon cyan"><i class="fas fa-network-wired"></i></div>
+                <div class="hcs-label">Networking & IT</div>
+              </div>
+              <div class="hcs-item">
+                <div class="hcs-icon blue"><i class="fas fa-code"></i></div>
+                <div class="hcs-label">Web Dev</div>
+              </div>
+              <div class="hcs-item">
+                <div class="hcs-icon gold"><i class="fas fa-boxes-stacked"></i></div>
+                <div class="hcs-label">Logistik</div>
+              </div>
+              <div class="hcs-item">
+                <div class="hcs-icon purple"><i class="fas fa-star"></i></div>
+                <div class="hcs-label">Event Org.</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card-float f2">
+            <i class="fas fa-location-dot" style="color:var(--accent-cyan);"></i>
+            <span data-i18n="hero_float_2">Berbasis Cirebon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT PREVIEW -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="about-grid">
+        <!-- Image -->
+        <div class="about-image-wrap reveal">
+          <div class="about-image-main">
+          <video autoplay loop muted playsinline width="100%">
+  <source src="v1.mp4" type="video/mp4" alt="Bagas Aditya — Founder DITZNET"> 
+  </video>
+          </div>
+          <div class="about-badge-float">
+            <div class="num" data-count="1" data-suffix="">1</div>
+            <div class="lbl" data-i18n="about_since">Berdiri Sejak</div>
+            <div style="font-family:var(--font-display); font-size:0.75rem; font-weight:700; color:var(--accent-cyan); margin-top:0.1rem;">Oktober 2024</div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="reveal reveal-delay-1">
+          <div class="section-label" data-i18n="about_label">Tentang Kami</div>
+          <h2 class="section-title">
+            <span data-i18n="about_title_1">Kami Menggerakkan</span><br>
+            <span data-i18n="about_title_2">Ekosistem Digital</span>
+          </h2>
+          <p class="section-desc" data-i18n="about_desc">
+            Didirikan pada 18 Oktober 2024, DITZNET TECHNOLOGY hadir sebagai mitra teknologi dan bisnis yang menyeluruh.
+          </p>
+
+          <div class="about-values">
+            <div class="about-value-item stagger-item">
+              <i class="fas fa-bolt" style="color:var(--accent-cyan);"></i>
+              <h4 data-i18n="about_val_1_title">Inovatif</h4>
+              <p data-i18n="about_val_1_desc">Selalu menghadirkan solusi terkini yang relevan.</p>
+            </div>
+            <div class="about-value-item stagger-item">
+              <i class="fas fa-shield-halved" style="color:var(--accent-blue);"></i>
+              <h4 data-i18n="about_val_2_title">Terpercaya</h4>
+              <p data-i18n="about_val_2_desc">Komitmen penuh terhadap kualitas dan kepuasan klien.</p>
+            </div>
+            <div class="about-value-item stagger-item">
+              <i class="fas fa-cubes" style="color:var(--accent-gold);"></i>
+              <h4 data-i18n="about_val_3_title">Terpadu</h4>
+              <p data-i18n="about_val_3_desc">Layanan lengkap, semua di bawah satu atap.</p>
+            </div>
+            <div class="about-value-item stagger-item">
+              <i class="fas fa-earth-asia" style="color:#a78bfa;"></i>
+              <h4 data-i18n="about_val_4_title">Lokal & Global</h4>
+              <p data-i18n="about_val_4_desc">Akar kuat di Cirebon, visi nasional.</p>
+            </div>
+          </div>
+
+          <div style="margin-top:2rem;">
+            <a href="about.html" class="btn btn-outline">
+              <i class="fas fa-arrow-right"></i>
+              <span data-i18n="about_btn">Selengkapnya</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SERVICES PREVIEW -->
+  <section class="section">
+    <div class="section-inner">
+      <div style="text-align:center; margin-bottom:3rem;" class="reveal">
+        <div class="section-label" data-i18n="services_label">Layanan Kami</div>
+        <h2 class="section-title">
+          <span data-i18n="services_title_1">Apa yang Bisa</span> <span data-i18n="services_title_2">Kami Lakukan</span>
+        </h2>
+        <p class="section-desc" style="margin:0 auto;" data-i18n="services_desc">Rangkaian layanan kami dirancang untuk menjawab setiap tantangan bisnis Anda.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Networking -->
+        <div class="card service-card stagger-item">
+          <div class="service-icon" style="background:rgba(0,212,255,0.1); color:var(--accent-cyan);">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <h3 data-i18n="svc_net_name">Networking & IT</h3>
+          <p data-i18n="svc_net_desc">Infrastruktur jaringan profesional termasuk WiFi hotspot voucher dan solusi konektivitas.</p>
+          <div class="service-features">
+            <div class="service-feature"><i class="fas fa-circle-check"></i><span data-i18n="svc_net_f1">WiFi Hotspot & Voucher</span></div>
+            <div class="service-feature"><i class="fas fa-circle-check"></i><span data-i18n="svc_net_f2">Instalasi Jaringan LAN/WAN</span></div>
+            <div class="service-feature"><i class="fas fa-circle-check"></i><span data-i18n="svc_net_f3">Mikrotik & Router Setup</span></div>
+          </div>
+        </div>
+
+        <!-- Web Dev -->
+        <div class="card service-card stagger-item">
+          <div class="service-icon" style="background:rgba(26,111,255,0.1); color:var(--accent-blue);">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 data-i18n="svc_web_name">Web Development</h3>
+          <p data-i18n="svc_web_desc">Pengembangan aplikasi web modern yang responsif, cepat, dan sesuai kebutuhan bisnis.</p>
+          <div class="service-features">
+            <div class="service-feature"><i class="fas fa-circle-check"></i><span data-i18n="svc_web_f1">Company Profile Website</span></div>
+            <div class="service-feature"><i class="fas fa-circle-check"></i><span data-i18n="svc_web_f2">Aplikasi Web Kustom</span></div>
+            <div class="service-feature"><i class="fas fa-circle-check"></i><span data-i18n="svc_web_f3">UI/UX Design Modern</span></div>
+          </div>
+        </div>
+
+        <!-- Event Org -->
+        <div class="card service-card stagger-item">
+          <div class="service-icon" style="background:rgba(245,166,35,0.1); color:var(--accent-gold);">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3 data-i18n="svc_eo_name">Event Organizer</h3>
+          <p data-i18n="svc_eo_desc">Perencanaan dan pelaksanaan event profesional dari pernikahan hingga event korporat.</p>
+          <div class="service-features">
+            <div class="service-feature"><i class="fas fa-circle-check"></i><span data-i18n="svc_eo_f1">Wedding & Resepsi</span></div>
+            <div class="service-feature"><i class="fas fa-circle-check"></i><span data-i18n="svc_eo_f2">Event Korporat & Gathering</span></div>
+            <div class="service-feature"><i class="fas fa-circle-check"></i><span data-i18n="svc_eo_f3">Event Planning & Konsultasi</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:3rem;" class="reveal">
+        <a href="services.html" class="btn btn-primary">
+          <i class="fas fa-layer-group"></i>
+          <span>Semua Layanan</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PROJECTS PREVIEW -->
+  <section class="section">
+    <div class="section-inner">
+      <div style="text-align:center; margin-bottom:3rem;" class="reveal">
+        <div class="section-label" data-i18n="projects_label">Proyek</div>
+        <h2 class="section-title">
+          <span data-i18n="projects_title_1">Karya yang</span> <span class="section-title" style="background:var(--gradient-gold); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;" data-i18n="projects_title_2">Berbicara</span>
+        </h2>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Ditz Money -->
+        <div class="card project-card stagger-item">
+          <div class="project-accent" style="background:linear-gradient(90deg, #4CAF50, #22c55e);"></div>
+          <div class="project-header">
+            <div class="project-icon" style="background:rgba(76,175,80,0.1); color:#4CAF50;"><img src="assets/ditzmoney.png" alt="ditzmoneylogo"></div>
+            <a href="https://ditzmoney.netlify.app" target="_blank" class="project-link-icon"><i class="fas fa-arrow-up-right-from-square"></i></a>
+          </div>
+          <h3>Ditz Money</h3>
+          <p>Aplikasi manajemen keuangan pribadi untuk mencatat pemasukan dan pengeluaran dengan mudah.</p>
+          <div class="project-domain"><i class="fas fa-globe"></i> ditzmoney.netlify.app</div>
+          <div style="margin-top:0.75rem;"><span class="badge badge-cyan">Web App</span></div>
+        </div>
+
+        <!-- Ngaji Yuk -->
+        <div class="card project-card stagger-item">
+          <div class="project-accent" style="background:linear-gradient(90deg, #2196F3, #1a6fff);"></div>
+          <div class="project-header">
+            <div class="project-icon" style="background:rgba(33,150,243,0.1); color:#2196F3;"><img src="assets/ngajiyuk.png" alt="ngajiyuk"></div>
+            <a href="https://ngajiyuk-app.netlify.app" target="_blank" class="project-link-icon"><i class="fas fa-arrow-up-right-from-square"></i></a>
+          </div>
+          <h3>Ngaji Yuk</h3>
+          <p>Platform pembelajaran Al-Qur'an interaktif untuk memudahkan ibadah dan belajar mengaji.</p>
+          <div class="project-domain"><i class="fas fa-globe"></i> ngajiyuk-app.netlify.app</div>
+          <div style="margin-top:0.75rem;"><span class="badge badge-blue">Web App</span></div>
+        </div>
+
+        <!-- Hantarin -->
+        <div class="card project-card stagger-item">
+          <div class="project-accent" style="background:linear-gradient(90deg, #FF9800, #f5a623);"></div>
+          <div class="project-header">
+            <div class="project-icon" style="background:rgba(255,152,0,0.1); color:#FF9800;"><img src="assets/hantarin.svg" alt="hantarin"></div>
+            <a href="https://hantarin.netlify.app" target="_blank" class="project-link-icon"><i class="fas fa-arrow-up-right-from-square"></i></a>
+          </div>
+          <h3>Hantarin</h3>
+          <p>Aplikasi pencatatan dan manajemen seserahan pernikahan lengkap dengan tracking budget dan laporan ekspor.</p>
+          <div class="project-domain"><i class="fas fa-globe"></i> hantarin.netlify.app</div>
+          <div style="margin-top:0.75rem;"><span class="badge badge-gold">Web App</span></div>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:2.5rem;" class="reveal">
+        <a href="projects.html" class="btn btn-outline">
+          <i class="fas fa-folder-open"></i>
+          <span>Semua Proyek</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.png" alt="DITZNET TECHNOLOGY">
+        <p data-i18n="footer_desc">Ekosistem layanan teknologi dan bisnis terpadu — semua dalam satu mitra terpercaya.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/6281464435341" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://instagram.com/ditznet.tech" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_links">Tautan</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span data-i18n="nav_home">Beranda</span></a></li>
+          <li><a href="about.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span data-i18n="nav_about">Tentang</span></a></li>
+          <li><a href="projects.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span data-i18n="nav_projects">Proyek</span></a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span data-i18n="nav_contact">Kontak</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_services">Layanan</h4>
+        <ul>
+          <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span data-i18n="svc_net_name">Networking & IT</span></a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span data-i18n="svc_web_name">Web Development</span></a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span data-i18n="svc_log_name">Logistik & Warehouse</span></a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span data-i18n="svc_eo_name">Event Organizer</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_contact">Kontak</h4>
+        <ul>
+          <li><a href="https://wa.me/6281464435341" target="_blank"><i class="fab fa-whatsapp"></i><span>081464435341</span></a></li>
+          <li><a href="https://instagram.com/ditznet.tech" target="_blank"><i class="fab fa-instagram"></i><span>@ditznet.tech</span></a></li>
+          <li><a href="#"><i class="fas fa-location-dot"></i><span>Cirebon, Jawa Barat</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 <span>DITZNET TECHNOLOGY</span>. <span data-i18n="footer_rights">Seluruh hak dilindungi.</span></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── BOTTOM NAVIGATION (Mobile) ── -->
+<nav class="bottom-nav">
+  <a href="index.html" class="bottom-nav-item active">
+    <i class="fas fa-house"></i>
+    <span data-i18n="nav_home">Beranda</span>
+  </a>
+  <a href="about.html" class="bottom-nav-item">
+    <i class="fas fa-circle-info"></i>
+    <span data-i18n="nav_about">Tentang</span>
+  </a>
+  <a href="services.html" class="bottom-nav-item">
+    <i class="fas fa-layer-group"></i>
+    <span data-i18n="nav_services">Layanan</span>
+  </a>
+  <a href="projects.html" class="bottom-nav-item">
+    <i class="fas fa-folder-open"></i>
+    <span data-i18n="nav_projects">Proyek</span>
+  </a>
+  <a href="contact.html" class="bottom-nav-item">
+    <i class="fas fa-envelope"></i>
+    <span data-i18n="nav_contact">Kontak</span>
+  </a>
+</nav>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/router.js"></script>
+</body>
+</html>

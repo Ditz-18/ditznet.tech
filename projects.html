@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyek — DITZNET TECHNOLOGY</title>
+  <meta name="description" content="Portfolio produk digital DITZNET TECHNOLOGY — Ditz Money, Ngaji Yuk, Hantarin, dan lebih banyak lagi.">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .projects-full-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .project-card-full {
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .project-preview {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .project-preview img {
+      max-height: 90px;
+      max-width: 70%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      position: relative;
+      z-index: 1;
+    }
+    .project-preview-bg {
+      position: absolute;
+      inset: 0;
+      opacity: 0.08;
+    }
+    .project-preview-icon {
+      font-size: 3.5rem;
+      position: relative;
+      z-index: 1;
+      filter: drop-shadow(0 4px 20px currentColor);
+    }
+    .project-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
+    }
+    .project-stack {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    @media (max-width: 1024px) {
+      .projects-full-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .projects-full-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<canvas id="particles-canvas"></canvas>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="DITZNET">
+      <span class="nav-logo-text">DITZNET</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" data-i18n="nav_home">Beranda</a>
+      <a href="about.html" data-i18n="nav_about">Tentang</a>
+      <a href="services.html" data-i18n="nav_services">Layanan</a>
+      <a href="projects.html" class="active" data-i18n="nav_projects">Proyek</a>
+      <a href="contact.html" data-i18n="nav_contact">Kontak</a>
+    </div>
+    <div class="nav-actions">
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="id">ID</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="page-transition">
+
+  <div class="page-hero">
+    <div class="grid-bg"></div>
+    <div class="section-inner">
+      <div class="section-label" data-i18n="projects_label">Proyek</div>
+      <h1 class="section-title">
+        <span data-i18n="projects_title_1">Karya yang</span>
+        <span style="background:var(--gradient-gold); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;" data-i18n="projects_title_2">Berbicara</span>
+      </h1>
+      <p class="section-desc" style="margin:0 auto; text-align:center;" data-i18n="projects_desc">
+        Beberapa produk digital yang telah kami bangun dan kembangkan.
+      </p>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top: 40px;">
+    <div class="section-inner">
+      <div class="projects-full-grid">
+
+        <!-- DITZ MONEY -->
+        <div class="card project-card-full stagger-item">
+          <div class="project-preview">
+            <div class="project-preview-bg" style="background: radial-gradient(circle at center, #4CAF50 0%, transparent 70%);"></div>
+            <img src="assets/ditzmoney.png" style="height: 80%; width: auto;" alt="ditzmoneylogo">
+          </div>
+          <div class="project-meta">
+            <h3 style="font-family:var(--font-display); font-size:1.15rem; font-weight:800;">Ditz Money</h3>
+            <a href="https://ditzmoney.netlify.app" target="_blank" class="btn btn-outline" style="font-size:0.75rem; padding:0.4rem 0.85rem;">
+              <i class="fas fa-arrow-up-right-from-square"></i>
+              <span data-i18n="proj_btn">Kunjungi</span>
+            </a>
+          </div>
+          <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.65; margin-bottom:0.75rem;">
+            Aplikasi manajemen keuangan pribadi yang membantu pengguna mencatat pemasukan dan pengeluaran harian dengan tampilan yang bersih dan intuitif.
+          </p>
+          <div class="project-domain" style="margin-bottom:0.75rem;"><i class="fas fa-globe"></i> ditzmoney.netlify.app</div>
+          <div class="project-stack">
+            <span class="badge badge-cyan">Web App</span>
+            <span class="badge" style="background:rgba(76,175,80,0.1); color:#4CAF50; border:1px solid rgba(76,175,80,0.2);">Keuangan</span>
+          </div>
+          <div style="height:3px; background:linear-gradient(90deg,#4CAF50,#22c55e); border-radius:0 0 4px 4px; position:absolute; bottom:0; left:0; right:0;"></div>
+        </div>
+
+        <!-- NGAJI YUK -->
+        <div class="card project-card-full stagger-item">
+          <div class="project-preview">
+            <div class="project-preview-bg" style="background: radial-gradient(circle at center, #2196F3 0%, transparent 70%);"></div>
+            <img src="assets/ngajiyuk.png" style="height: 80%; width: auto;" alt="ngajiyuk">
+          </div>
+          <div class="project-meta">
+            <h3 style="font-family:var(--font-display); font-size:1.15rem; font-weight:800;">Ngaji Yuk</h3>
+            <a href="https://ngajiyuk-app.netlify.app" target="_blank" class="btn btn-outline" style="font-size:0.75rem; padding:0.4rem 0.85rem;">
+              <i class="fas fa-arrow-up-right-from-square"></i>
+              <span data-i18n="proj_btn">Kunjungi</span>
+            </a>
+          </div>
+          <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.65; margin-bottom:0.75rem;">
+            Platform pembelajaran Al-Qur'an interaktif yang menyediakan fitur baca, tadarus, dan bimbingan mengaji secara digital untuk semua kalangan.
+          </p>
+          <div class="project-domain" style="margin-bottom:0.75rem;"><i class="fas fa-globe"></i> ngajiyuk-app.netlify.app</div>
+          <div class="project-stack">
+            <span class="badge badge-blue">Web App</span>
+            <span class="badge" style="background:rgba(33,150,243,0.1); color:#2196F3; border:1px solid rgba(33,150,243,0.2);">Pendidikan</span>
+          </div>
+          <div style="height:3px; background:linear-gradient(90deg,#2196F3,#1a6fff); border-radius:0 0 4px 4px; position:absolute; bottom:0; left:0; right:0;"></div>
+        </div>
+
+        <!-- HANTARIN -->
+        <div class="card project-card-full stagger-item">
+          <div class="project-preview">
+            <div class="project-preview-bg" style="background: radial-gradient(circle at center, #FF9800 0%, transparent 70%);"></div>
+            <img src="assets/hantarin.svg" style="height: 80%; width: auto;" alt="hantarin">
+          </div>
+          <div class="project-meta">
+            <h3 style="font-family:var(--font-display); font-size:1.15rem; font-weight:800;">Hantarin</h3>
+            <a href="https://hantarin.netlify.app" target="_blank" class="btn btn-outline" style="font-size:0.75rem; padding:0.4rem 0.85rem;">
+              <i class="fas fa-arrow-up-right-from-square"></i>
+              <span data-i18n="proj_btn">Kunjungi</span>
+            </a>
+          </div>
+          <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.65; margin-bottom:0.75rem;">
+            Aplikasi pencatatan dan manajemen seserahan pernikahan yang lengkap dengan fitur tracking budget, status item, dan laporan ekspor untuk memudahkan persiapan pernikahan.
+          </p>
+          <div class="project-domain" style="margin-bottom:0.75rem;"><i class="fas fa-globe"></i> hantarin.netlify.app</div>
+          <div class="project-stack">
+            <span class="badge badge-gold">Web App</span>
+            <span class="badge" style="background:rgba(255,152,0,0.1); color:#FF9800; border:1px solid rgba(255,152,0,0.2);">Wedding</span>
+          </div>
+          <div style="height:3px; background:linear-gradient(90deg,#FF9800,#f5a623); border-radius:0 0 4px 4px; position:absolute; bottom:0; left:0; right:0;"></div>
+        </div>
+      </div>
+
+      <!-- More coming soon -->
+      <div class="card reveal" style="margin-top:2rem; padding:3rem; text-align:center; border-style: dashed;">
+        <i class="fas fa-plus-circle" style="font-size:2rem; color:var(--text-muted); margin-bottom:1rem; display:block;"></i>
+        <h3 style="font-family:var(--font-display); font-size:1rem; font-weight:700; color:var(--text-secondary); margin-bottom:0.5rem;">Lebih Banyak Proyek Segera Hadir</h3>
+        <p style="font-size:0.85rem; color:var(--text-muted);">Kami terus berinovasi dan mengembangkan produk-produk digital baru.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top:0;">
+    <div class="section-inner">
+      <div class="card reveal" style="padding:3.5rem; text-align:center; position:relative; overflow:hidden;">
+        <div class="grid-bg"></div>
+        <div class="section-label" style="justify-content:center;">Punya Ide Proyek?</div>
+        <h2 class="section-title" style="font-size:clamp(1.8rem,4vw,2.5rem);">Wujudkan Ide<br>Digital <span>Anda Bersama Kami</span></h2>
+        <p style="color:var(--text-secondary); max-width:480px; margin:0 auto 2rem;">Ceritakan kebutuhan Anda dan tim kami akan membantu mewujudkannya menjadi produk digital yang nyata.</p>
+        <a href="contact.html" class="btn btn-primary"><i class="fas fa-lightbulb"></i> <span>Diskusikan Ide</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.png" alt="DITZNET TECHNOLOGY">
+        <p data-i18n="footer_desc">Ekosistem layanan teknologi dan bisnis terpadu.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/6281464435341" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://instagram.com/ditznet.tech" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_links">Tautan</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span data-i18n="nav_home">Beranda</span></a></li>
+          <li><a href="about.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span data-i18n="nav_about">Tentang</span></a></li>
+          <li><a href="projects.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span data-i18n="nav_projects">Proyek</span></a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span data-i18n="nav_contact">Kontak</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_services">Layanan</h4>
+        <ul>
+          <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span>Networking & IT</span></a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span>Web Development</span></a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span>Logistik & Warehouse</span></a></li>
+          <li><a href="services.html"><i class="fas fa-chevron-right" style="font-size:0.6rem;"></i><span>Event Organizer</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_contact">Kontak</h4>
+        <ul>
+          <li><a href="https://wa.me/6281464435341" target="_blank"><i class="fab fa-whatsapp"></i><span>081464435341</span></a></li>
+          <li><a href="https://instagram.com/ditznet.tech" target="_blank"><i class="fab fa-instagram"></i><span>@ditznet.tech</span></a></li>
+          <li><a href="#"><i class="fas fa-location-dot"></i><span>Cirebon, Jawa Barat</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 <span>DITZNET TECHNOLOGY</span>. <span data-i18n="footer_rights">Seluruh hak dilindungi.</span></span>
+    </div>
+  </div>
+</footer>
+
+<nav class="bottom-nav">
+  <a href="index.html" class="bottom-nav-item"><i class="fas fa-house"></i><span data-i18n="nav_home">Beranda</span></a>
+  <a href="about.html" class="bottom-nav-item"><i class="fas fa-circle-info"></i><span data-i18n="nav_about">Tentang</span></a>
+  <a href="services.html" class="bottom-nav-item"><i class="fas fa-layer-group"></i><span data-i18n="nav_services">Layanan</span></a>
+  <a href="projects.html" class="bottom-nav-item active"><i class="fas fa-folder-open"></i><span data-i18n="nav_projects">Proyek</span></a>
+  <a href="contact.html" class="bottom-nav-item"><i class="fas fa-envelope"></i><span data-i18n="nav_contact">Kontak</span></a>
+</nav>
+
+<script src="js/main.js"></script>
+<script src="js/particles.js"></script>
+</body>
+</html>
